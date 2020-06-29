@@ -1,0 +1,30 @@
+{
+  "name": "express-jwt",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm start",
+    "start": "cross-env NODE_ENV=development nodemon bin/www",
+    "prod": "cross-env NODE_ENV=production nodemon bin/www",
+    "api": "apidoc -i ./routes/ -o public/docs"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "apidoc": "^0.23.0",
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.4"
+  },
+  "_moduleAliases": {
+    "@": "./",
+    "@utils": "utils"
+  }
+}

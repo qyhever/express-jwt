@@ -1,0 +1,18 @@
+{
+  "name": "api接口文档",
+  "version": "0.0.0",
+  "description": "express-jwt demo 接口文档",
+  "title": "api文档",
+  "url" : "http://localhost:5000",
+  "sampleUrl": "http://localhost:5000",
+  "template": {
+    "withCompare": true,
+    "withGenerator": true
+  },
+   "header": {
+    "title": "回到底部"
+  },
+  "footer": {
+    "title": "回到顶部"
+  }
+}
