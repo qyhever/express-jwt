@@ -9,8 +9,8 @@ module.exports = function (options) {
       'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type,Authorization'
     })
-    if (req.method === 'OPTIONS') {
-      req.status(200).end()
+    if (req.method === 'OPTIONS' || req.originalUrl === '/favicon.ico') {
+      res.status(200).end()
     } else {
       next()
     }

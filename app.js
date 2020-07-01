@@ -1,17 +1,14 @@
-require('module-alias/register') // alias
 const createError = require('http-errors')
 const express = require('express')
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
+
+require('module-alias/register') // alias
 const cors = require('@/middlewares/cors')
 const authorization = require('@/middlewares/authorization')
 
 const app = express()
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'ejs')
 
 app.use(logger('dev'))
 app.use(express.json())
@@ -39,7 +36,6 @@ app.use(function(req, res, next) {
 // error handler
 app.use(function(err, req, res, next) {
   const status = err.status || 500
-
   res.status(status).json({
     success: false,
     code: status,
